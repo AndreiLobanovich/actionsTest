@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: AndreiLobanovich/labeler@fix_no_yml_file_error_message
+      - uses: kachkaev/labeler@dot-option
         with:
           configuration-path: ./labeler.yml
     
