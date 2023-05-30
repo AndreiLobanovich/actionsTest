@@ -1,2 +1,5 @@
 label1:
-- '.test/**'
+- 'test/**'
+label2:
+- 'test/*'
+
