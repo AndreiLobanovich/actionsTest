@@ -13,4 +13,5 @@ jobs:
       - uses: kachkaev/labeler@dot-option
         with:
           configuration-path: ./labeler.yml
+          dot: true
     
