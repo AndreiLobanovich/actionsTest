@@ -1,14 +1,14 @@
-name: "Labeler"
-on:
-- pull_request_target # also tried - pull_request with types [opened]
-
+name: Labeler
+on: pull_request
 jobs:
-  pr-labeler:
+  label:
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       pull-requests: write
-    runs-on: ubuntu-latest
     steps:
     - uses: actions/labeler@v4.1.0
       with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
         sync-labels: true
+        dot: true
