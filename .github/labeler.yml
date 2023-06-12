@@ -4,4 +4,6 @@ label2:
 - 'test1/*'
 readme:
 - 'README.md'
+docs:
+- '**/*.md'
 
