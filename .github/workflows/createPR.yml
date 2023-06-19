@@ -1,6 +1,7 @@
 name: createPR
 on: dispatch
 jobs:
+  runs-on: ubuntu-latest
   createPR:
     steps:
       - uses: peter-evans/create-pull-request@v5
