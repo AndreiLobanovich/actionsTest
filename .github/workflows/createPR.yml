@@ -11,3 +11,4 @@ jobs:
           title: 'test'
           body: 'test'
           branch: 'test10'
+          base: 'main'
