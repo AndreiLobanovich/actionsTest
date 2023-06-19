@@ -1,4 +1,4 @@
-name: createPR
+name: 'createPR'
 on: dispatch
 jobs:
   runs-on: ubuntu-latest
