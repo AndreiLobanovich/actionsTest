@@ -4,6 +4,10 @@ on: workflow_dispatch
 jobs:
   stale:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # only for delete-branch option
+      issues: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v2
       - uses: AndreiLobanovich/stale@test
