@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: test
-          title: test
-          body: test
-          branch: test
+          commit-message: 'test'
+          title: 'test'
+          body: 'test'
+          branch: 'test'
