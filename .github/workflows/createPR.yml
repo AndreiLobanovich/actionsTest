@@ -1,12 +1,12 @@
 name: 'createPR'
 on: workflow_dispatch
 jobs:
-  runs-on: ubuntu-latest
   createPR:
+    runs-on: ubuntu-latest
     steps:
       - uses: peter-evans/create-pull-request@v5
-      with:
-        commit-message: test
-        title: test
-        body: test
-        branch: test
+        with:
+          commit-message: test
+          title: test
+          body: test
+          branch: test
