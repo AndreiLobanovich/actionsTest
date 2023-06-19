@@ -10,4 +10,4 @@ jobs:
           commit-message: 'test'
           title: 'test'
           body: 'test'
-          branch: 'test'
+          branch: 'test10'
