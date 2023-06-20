@@ -30,4 +30,4 @@ jobs:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: .github/labeler.yml
           sync-labels: true
-          pr-number: ${{steps.cr-pr.outputs.pr_number}}
+          pr-number: ${{steps.cr-pr.outputs.pull-request-number}}
