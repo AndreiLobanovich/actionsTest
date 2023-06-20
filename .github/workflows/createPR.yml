@@ -20,7 +20,10 @@ jobs:
           title: 'Update README.md'
           body: 'Appended * to the end of README.md'
           branch: 'update-readme'
-
+      
+      - name: testEcho
+        run: echo ${{steps.cr-pr.outputs.pr_number}}
+        
       - name: Label Pull Request
         uses: credfeto/labeler@feature/pass-in-pull-request-or-issue
         with:
