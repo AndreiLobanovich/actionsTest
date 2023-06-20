@@ -12,7 +12,7 @@ jobs:
       - name: Update README.md
         run: echo '*' >> README.md
 
-      - name: Create Pull Request
+      - id: cr-pr
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -20,3 +20,11 @@ jobs:
           title: 'Update README.md'
           body: 'Appended * to the end of README.md'
           branch: 'update-readme'
+
+      - name: Label Pull Request
+        uses: credfeto/labeler@feature/pass-in-pull-request-or-issue
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/labeler.yml
+          sync-labels: true
+          pr-number: ${{steps.cr-pr.outputs.pr_number}}
