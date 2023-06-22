@@ -10,7 +10,7 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v2
-      - uses: AndreiLobanovich/my_stale@test
+      - uses: AndreiLobanovich/my_stale@check_pinned_event
         with:
           stale-issue-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days.'
           days-before-stale: 2
