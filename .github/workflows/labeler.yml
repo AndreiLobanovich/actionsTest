@@ -8,7 +8,7 @@ jobs:
       pull-requests: write
       issues: write
     steps:
-    - uses: jsoref/labeler@fix-labeler
+    - uses: credfeto/feature@pass-in-pull-request-or-issue
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         sync-labels: true
