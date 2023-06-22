@@ -12,4 +12,4 @@ jobs:
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         sync-labels: true
-        pr-number: 999
+        pr-number: asjdkas
