@@ -12,4 +12,6 @@ jobs:
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         sync-labels: true
-        pr-number: asjdkas
+        pr-number: |
+          28
+          27
