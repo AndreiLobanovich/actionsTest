@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: label-the-PR
-      uses: danielsht86/labeler@danielsht86/add-output
+      uses: danielsht86/labeler@danielsht86/add-outputs
 
     - id: run-frontend-tests
       if: contains(fromJson(steps.label-the-PR.outputs.all-labels), 'frontend')
