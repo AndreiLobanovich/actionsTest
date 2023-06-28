@@ -8,6 +8,8 @@ jobs:
     steps:
     - id: label-the-PR
       uses: danielsht86/labeler@danielsht86/add-outputs
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
 
     - id: run-frontend-tests
       if: contains(fromJson(steps.label-the-PR.outputs.all-labels), 'frontend')
