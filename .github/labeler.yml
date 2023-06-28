@@ -2,7 +2,7 @@ label1:
 - 'test/**'
 label2:
 - 'test1/*'
-readme:
+backend:
 - 'README.md'
 docs:
 - '**/*.md'
