@@ -1,4 +1,4 @@
-name: "My workflow"
+name: "Conditional run"
 on:
 - pull_request_target
 
@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: label-the-PR
-      uses: actions/labeler@v3
-      
+      uses: danielsht86/labeler@danielsht86/add-output
+
     - id: run-frontend-tests
       if: contains(fromJson(steps.label-the-PR.outputs.all-labels), 'frontend')
       run: |
