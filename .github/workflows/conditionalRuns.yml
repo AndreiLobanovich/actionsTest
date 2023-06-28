@@ -9,7 +9,7 @@ jobs:
       new-labels: ${{ steps.label-the-PR.outputs.new-labels }}
     steps:
     - id: label-the-PR
-      uses: danielsht86/labeler@add-outputs
+      uses: danielsht86/labeler@danielsht86/add-outputs
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
   frontend-tests:
