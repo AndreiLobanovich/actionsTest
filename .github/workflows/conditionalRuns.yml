@@ -5,33 +5,18 @@ on:
 jobs:
   triage:
     runs-on: ubuntu-latest
-    outputs:
-      new-labels: ${{ steps.label-the-PR.outputs.new-labels }}
     steps:
     - id: label-the-PR
-      uses: danielsht86/labeler@danielsht86/add-outputs
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-  frontend-tests:
-    runs-on: ubuntu-latest
-    if: contains(fromJson(needs.triage.outputs.new-labels), 'frontend')
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run frontend tests
-        run: |
-          echo "Running frontend tests..."
-          # Put your commands for running frontend tests here
-
-  backend-tests:
-    runs-on: ubuntu-latest
-    if: contains(fromJson(needs.triage.outputs.new-labels), 'backend')
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run backend tests
-        run: |
-          echo "Running backend tests..."
-          # Put your commands for running backend tests here
+      uses: actions/labeler@v3
+      
+    - id: run-frontend-tests
+      if: contains(fromJson(steps.label-the-PR.outputs.all-labels), 'frontend')
+      run: |
+        echo "Running frontend tests..."
+        # Put your commands for running frontend tests here
+  
+    - id: run-backend-tests
+      if: contains(fromJson(steps.label-the-PR.outputs.all-labels), 'backend')
+      run: |
+        echo "Running backend tests..."
+        # Put your commands for running backend tests here
